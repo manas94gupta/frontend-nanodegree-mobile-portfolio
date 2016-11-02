@@ -1,6 +1,6 @@
 module.exports = function(grunt) {
 
-    // 1. All configuration goes here
+    // All configuration goes here
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
@@ -33,16 +33,31 @@ module.exports = function(grunt) {
                     dest: 'dist/css/'
                 }]
             }
+        },
+        htmlmin: {
+            build: {
+                options: {
+                    removeComments: true,
+                    collapseWhitespace: true
+                },
+                files: [{
+                    expand: true,
+                    cwd: './',
+                    src: ['**/*.html', '!node_modules/**/*.*', '!dist/**/*.*'],
+                    dest: 'dist/'
+                }]
+            }
         }
 
     });
 
-    // 3. Where we tell Grunt we plan to use this plug-in.
+    // Where we tell Grunt we plan to use this plug-in.
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
-    // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['imagemin', 'uglify', 'cssmin']);
+    // Where we tell Grunt what to do when we type "grunt" into the terminal.
+    grunt.registerTask('default', ['imagemin', 'uglify', 'cssmin', 'htmlmin']);
 
 };
