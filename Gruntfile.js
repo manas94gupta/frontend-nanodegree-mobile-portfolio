@@ -23,6 +23,16 @@ module.exports = function(grunt) {
                     dest: 'dist/js/'
                 }]
             }
+        },
+        cssmin: {
+            build: {
+                files: [{
+                    expand: true,
+                    cwd: 'css/',
+                    src: ['**/*.css'],
+                    dest: 'dist/css/'
+                }]
+            }
         }
 
     });
@@ -30,8 +40,9 @@ module.exports = function(grunt) {
     // 3. Where we tell Grunt we plan to use this plug-in.
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['imagemin', 'uglify']);
+    grunt.registerTask('default', ['imagemin', 'uglify', 'cssmin']);
 
 };
