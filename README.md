@@ -54,3 +54,25 @@ mobile portfolio project.
 * Reduced the number of pizzas from 200 to 20.
 * Added will-change property to the mover class so that the animating pizzas are on their own layer thus reducing paint.
 * Removed unused css from bootstrap-grid.css.
+
+## More Information
+
+### Hosting
+
+* Microsoft Internet Information Service(IIS) on Windows 8.1 was used to locally host the website.
+* Ngrok was used along with IIS to make my workstation act as a local server so that PageSpeed Insights could run on
+  this website.
+
+### Caching and Compression
+
+* Configured dynamic compression in web.config to enable it on IIS.
+* Added browser caching limit to maximum of 30 days for static content in web.config.
+
+### Grunt
+
+* Configured grunt to perform some tasks.
+* grunt-contrib-imagemin was used to compress images.
+* grunt-contrib-uglify was used to minify scripts.
+* grunt-contrib-cssmin was used to minify css.
+* grunt-contrib-htmlmin was used to minify html.
+* grunt-uncss was used to remove unused css.
