@@ -28,8 +28,8 @@ module.exports = function(grunt) {
             build: {
                 files: [{
                     expand: true,
-                    cwd: './',
-                    src: ['**/*.css', '!node_modules/**/*.*', '!dist/**/*.*'],
+                    cwd: 'dist/views/css',
+                    src: ['bootstrap-grid.css', '!node_modules/**/*.*', '!dist/**/*.*'],
                     dest: 'dist/'
                 }]
             }
