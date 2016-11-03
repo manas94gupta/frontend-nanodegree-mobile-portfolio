@@ -1,7 +1,7 @@
 # Website Performance Optimization portfolio project
 
 The objective is to reach PageSpeed Insights scores of above 90 for the
-mobile portfolio project.
+mobile portfolio project.      
 You will find the final production code inside the `dist` directory.
 
 ## PageSpeed Insights
