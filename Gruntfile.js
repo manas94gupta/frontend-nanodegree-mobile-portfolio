@@ -18,9 +18,9 @@ module.exports = function(grunt) {
             build: {
                 files: [{
                     expand: true,
-                    cwd: 'js/',
-                    src: ['**/*.js'],
-                    dest: 'dist/js/'
+                    cwd: './',
+                    src: ['**/*.js', '!node_modules/**/*.*', '!dist/**/*.*', 'Gruntfile.js'],
+                    dest: 'dist/'
                 }]
             }
         },
@@ -28,9 +28,9 @@ module.exports = function(grunt) {
             build: {
                 files: [{
                     expand: true,
-                    cwd: 'css/',
-                    src: ['**/*.css'],
-                    dest: 'dist/css/'
+                    cwd: './',
+                    src: ['**/*.css', '!node_modules/**/*.*', '!dist/**/*.*'],
+                    dest: 'dist/'
                 }]
             }
         },
