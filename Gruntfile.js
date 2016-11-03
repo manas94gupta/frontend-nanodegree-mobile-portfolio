@@ -8,9 +8,9 @@ module.exports = function(grunt) {
             dynamic: {
                 files: [{
                     expand: true,
-                    cwd: './',
+                    cwd: 'views/images',
                     src: ['**/*.{png,jpg,gif}', '!node_modules/**/*.*', '!dist/**/*.*'],
-                    dest: 'dist/'
+                    dest: 'dist/views/images'
                 }]
             }
         },
@@ -28,8 +28,8 @@ module.exports = function(grunt) {
             build: {
                 files: [{
                     expand: true,
-                    cwd: 'dist/views/css',
-                    src: ['bootstrap-grid.css', '!node_modules/**/*.*', '!dist/**/*.*'],
+                    cwd: './',
+                    src: ['**/*.css', '!node_modules/**/*.*', '!dist/**/*.*'],
                     dest: 'dist/'
                 }]
             }
