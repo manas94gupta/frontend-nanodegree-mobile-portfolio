@@ -2,6 +2,7 @@
 
 The objective is to reach PageSpeed Insights scores of above 90 for the
 mobile portfolio project.
+You will find the final production code inside the `dist` directory.
 
 ## PageSpeed Insights
 
@@ -45,12 +46,12 @@ mobile portfolio project.
 ### Optimizations specific to pizza.html
 
 * Added viewport for better rendering on different devices.
-* Optimized changePizzaSizes() by removing dxCalculation() and pizzaSizeSwitcher() from it and instead used switch
+* Optimized `changePizzaSizes()` by removing `dxCalculation()` and `pizzaSizeSwitcher()` from it and instead used switch
   case to determine pizza sizes.
-* Also removed multiple instances of selecting randomPizzaContainer from inside the for loop in changePizzaSizes().
+* Also removed multiple instances of selecting randomPizzaContainer from inside the for loop in `changePizzaSizes()`.
 * Replaced querySelectorAll with getElementsByClassName and querySelector with getElementById for better performance.
-* Removed forced synchronous layout caused by updatePositions() when scrolling by moving document.body.scrollTop and
-  items.length outside the for loop and calculating them just once.
+* Removed forced synchronous layout caused by `updatePositions()` when scrolling by moving `document.body.scrollTop` and
+  `items.length` outside the for loop and calculating them just once.
 * Reduced the number of pizzas from 200 to 20.
 * Added will-change property to the mover class so that the animating pizzas are on their own layer thus reducing paint.
 * Removed unused css from bootstrap-grid.css.
