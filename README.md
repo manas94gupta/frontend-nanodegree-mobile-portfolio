@@ -52,6 +52,7 @@ You will find the final production code inside the `dist` directory.
 * Replaced querySelectorAll with getElementsByClassName and querySelector with getElementById for better performance.
 * Removed forced synchronous layout caused by `updatePositions()` when scrolling by moving `document.body.scrollTop` and
   `items.length` outside the for loop and calculating them just once.
+* Dynamically calculating the number of pizzas to display based on the device screen height.
 * Reduced the number of pizzas from 200 to 20.
 * Added will-change property to the mover class so that the animating pizzas are on their own layer thus reducing paint.
 * Removed unused css from bootstrap-grid.css.
